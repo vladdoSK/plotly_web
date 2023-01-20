@@ -1,0 +1,219 @@
+body,
+html {
+    margin: 0 auto;
+    padding: 0 auto;
+    color: #fff;
+    background: rgb(23, 23, 26);
+    min-height: 100vh;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main{
+    width: 100%;
+}
+
+.graph{
+    width: 100%;
+    height: 500px;
+    margin: 10px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family:cursive;
+    color: aqua;
+
+}
+
+.selection{
+    width: 100%;
+    height: 400px;
+    background: black;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    color: rgb(184, 180, 180);
+}
+
+.bucket__block, .filter__block{
+    width: 12%;
+    height: 100%;
+    background: rgb(36, 35, 35);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.bucket__block h3, .filter__block h3, .time__item{
+    background: rgb(58, 57, 57);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bucket__items, .filter__items{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.bucket, .filter{
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+}
+
+.bucket:hover, .filter:hover{
+    background: rgb(43, 42, 42);
+}
+
+.bucket.active__submit, .filter.active__submit{
+    background: linear-gradient(to right, rgb(111, 2, 121),#036096);
+    color: white;
+}
+
+.filter{
+    padding-left: 35px;
+}
+
+.filter::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+}
+
+.filter.active__submit::after{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: rgb(65, 64, 64);
+    border-radius: 1px;
+
+    top:50%;
+    left: 14px;
+    transform: translate(0px, -50%);
+}
+
+.button__block{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+/*_______________TIME______________________*/
+
+.time__block{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.time__item{
+    width: 100%;
+    background: rgb(58, 57, 57);
+    position: relative;
+    cursor: pointer;
+    transition: all .5s ease 0s;
+}
+
+.time__item:hover{
+    background: rgb(78, 77, 77);
+}
+
+.time__item::after{
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-left: 4px solid rgb(184, 180, 180);
+    border-bottom: 4px solid rgb(184, 180, 180);
+
+    top:50%;
+    right: 10%;
+    transform: translate(0, -80%) rotate(-45deg);
+
+    transition: all .5s ease 0s;
+}
+
+.time__item.active::after{
+    transform: translate(0, -30%) rotate(135deg);
+}
+
+.time_values{
+    width: 100%;
+    background: linear-gradient(to right, rgb(31, 26, 26), rgb(95, 94, 94));
+    border-radius: 5px;
+
+    max-height: 0px;
+    overflow: hidden;
+
+    transition: all .5s ease 0s;
+}
+
+.time_values.active{
+    max-height: 300px;
+}
+
+.time{
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.time:hover{
+    background: rgb(71, 70, 70);
+}
+
+.time.active{
+    background: linear-gradient(to right, rgb(111, 2, 121),#036096);
+    color: white;
+}
+
+/*_______________BUTTON______________________*/
+
+.btn__submit{
+    width: 150px;
+    height: 45px;
+    background: rgb(98, 0, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: azure;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 8px rgb(53, 52, 52);
+    transition: all .4s ease 0s;
+}
+
+.btn__submit:hover{
+    background: rgb(57, 2, 146);
+}
+
+.btn__submit:active{
+    transform: translate(0, 5px);
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/styly.css">
+    <title>Plotly.js</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!--<div id="barChart"></div>-->
+
+        <main>
+            <div class="graph">
+                Create your query, get a graph
+                <div id="scientificChart"></div>
+            </div>
+
+            <div class="selection">
+                <div class="bucket__block">
+                    <h3>FROM</h3>
+                    <div class="bucket__items">
+                        <div class="bucket active__submit">RoadMeteo</div>
+                        <div class="bucket">CO2</div>
+                        <div class="bucket">Dessmon</div>
+                    </div>
+                </div>
+                <div class="filter__block">
+                    <h3>Filter</h3>
+                    <div class="filter__items filter__block-1">
+                        <div class="filter">direction</div>
+                        <div class="filter">speed</div>
+                    </div>
+                </div>
+                <div class="filter__block">
+                    <h3>Filter</h3>
+                    <div class="filter__items filter__block-2">
+                    </div>
+                </div>
+                <div class="filter__block">
+                    <h3>Filter</h3>
+                    <div class="filter__items filter__block-3">
+                    </div>
+                </div>
+
+                <div class="button__block">
+                    <div class="time__block">
+                        <div class="time__item active__submit">Past 30d</div>
+                        <div class="time_values">
+                            <div class="time active">Past 30d</div>
+                            <div class="time">Past 40d</div>
+                            <div class="time">Past 50d</div>
+                            <div class="time">Past 60d</div>
+                            <div class="time">Past 70d</div>
+                            <div class="time">Past 80d</div>
+                        </div>
+                    </div>
+                    <div class="btn__submit">Submit</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.33.1/plotly.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.2/d3.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
